@@ -96,3 +96,4 @@ node_modules/
 .env
 .env.*
 /Eventify/wwwroot/images
+/Smart-Route-Planner/Smart-Route-Planner/appsettings.json

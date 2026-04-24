@@ -85,8 +85,11 @@ namespace Smart_Route_Planner.Data
 
                 apartments.Add(new Apartment
                 {
+                    Name = "Apartment " + i,
+                    Type = "Apartment",
                     Lat = lat,
                     Lng = lng,
+                    Price = rand.Next(1000, 5000),
                     NodeId = nearestNode
                 });
             }

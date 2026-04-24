@@ -7,6 +7,7 @@
         public string Type { get; set; } = string.Empty;
         public double Lat { get; set; }
         public double Lng { get; set; }
+        public double Price { get; set; }
 
         public long NodeId { get; set; }
         public virtual Node? Node { get; set; }

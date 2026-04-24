@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Smart_Route_Planner.Data;
+using Smart_Route_Planner.Repositories;
+using Smart_Route_Planner.Services;
 
 namespace Smart_Route_Planner
 {
@@ -19,6 +21,10 @@ namespace Smart_Route_Planner
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            // Register Custom Services and Repositories
+            builder.Services.AddScoped<IRouteRepository, RouteRepository>();
+            builder.Services.AddScoped<IRouteService, RouteService>();
 
             var app = builder.Build();
 
